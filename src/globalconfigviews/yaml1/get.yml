@@ -1,0 +1,11 @@
+Get all GlobalConfig
+---
+tags:
+  - globalconfig
+responses:
+  200:
+    description: OK
+    name: body
+    in: body
+  400:
+    description: ERROR

@@ -1,0 +1,37 @@
+Create a new GlobalConfig
+---
+tags:
+  - globalconfig
+parameters:
+  - name: body
+    in: body
+    required: false
+    schema:
+      id: globalconfig_schema
+      properties:
+        globalConfigType:
+          type: string
+        globalConfigPath:
+          type: string
+        globalConfigName:
+          type: string
+        globalConfigDefaultValue:
+          type: string
+        globalConfigFullPath:
+          type: string
+        globalConfigUuid:
+          type: string
+        opsCodeAutoId:
+          type: string
+        globalConfigIsActive:
+          type: boolean
+        loggedInUser:
+           type: string
+
+responses:
+  201:
+    description: CREATED
+    name: body
+    in: body
+  412:
+    description: PRE-CONDITION FAILED

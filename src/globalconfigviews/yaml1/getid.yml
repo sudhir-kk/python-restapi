@@ -1,0 +1,27 @@
+Get GlobalConfig  with ID
+---
+tags:
+  - globalconfig
+parameters:
+    - name: globalConfigId
+      in: path
+      type: string
+      required: true
+definitions:
+  globalConfigId:
+    type: object
+    properties:
+      template:
+        type: array
+        items:
+          $ref: '#/definitions/globalConfig'
+  globalConfig:
+    type: string
+
+responses:
+  200:
+    description: OK
+    name: body
+    in: body
+  400:
+    description: ERROR

@@ -1,0 +1,25 @@
+Delete the specific GlobalConfig
+---
+tags:
+  - globalconfig
+parameters:
+  - name: globalConfigId
+    in: path
+    required: true
+    type: integer
+
+  - name: body
+    in: body
+    required: false
+    schema:
+      id: globalconfig_schema1
+      properties:
+        loggedInUser:
+          type: string
+responses:
+  200:
+    description: OK
+    name: body
+    in: body
+  400:
+    description: ERROR
